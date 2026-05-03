@@ -6,7 +6,6 @@
 #include <cstdlib>
 using namespace std;
 
-// ================= STOCK CLASS =================
 class Stock
 {
 public:
@@ -22,7 +21,6 @@ public:
     }
 };
 
-// ================= HOLDING CLASS =================
 class Holding
 {
 public:
@@ -38,7 +36,6 @@ public:
     }
 };
 
-// ================= USER CLASS =================
 class User
 {
 public:
@@ -92,7 +89,6 @@ public:
         cout << "\n❌ Stock Not Found!\n";
     }
 
-    // Sell Stock
     void sellStock(vector<Stock> &market)
     {
         string symbol;
@@ -145,7 +141,6 @@ public:
         cout << "\n❌ You Do Not Own This Stock!\n";
     }
 
-    // View Portfolio
     void viewPortfolio(vector<Stock> &market)
     {
         cout << "\n================ YOUR PORTFOLIO ================\n";
@@ -197,7 +192,6 @@ public:
         cout << "Net Profit/Loss: ₹" << currentValue - totalInvestment << endl;
     }
 
-    // Save Transactions
     void saveTransaction(string type, string symbol, int quantity, double price)
     {
         ofstream file("transactions.txt", ios::app);
@@ -211,7 +205,6 @@ public:
         file.close();
     }
 
-    // View Transaction History
     void viewTransactions()
     {
         ifstream file("transactions.txt");
@@ -231,7 +224,6 @@ public:
     }
 };
 
-// ================= DISPLAY MARKET =================
 void displayMarket(vector<Stock> &market)
 {
     cout << "\n================ STOCK MARKET ================\n";
@@ -248,7 +240,6 @@ void displayMarket(vector<Stock> &market)
     }
 }
 
-// ================= UPDATE MARKET PRICES =================
 void updateMarket(vector<Stock> &market)
 {
     srand(time(0));
@@ -265,7 +256,6 @@ void updateMarket(vector<Stock> &market)
     }
 }
 
-// ================= MAIN FUNCTION =================
 int main()
 {
     vector<Stock> market;
