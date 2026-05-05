@@ -51,7 +51,7 @@ public:
         balance = b;
     }
 
-    // Buy Stock
+    
     void buyStock(vector<Stock> &market)
     {
         string symbol;
@@ -143,7 +143,7 @@ public:
 
     void viewPortfolio(vector<Stock> &market)
     {
-        cout << "\n================ YOUR PORTFOLIO ================\n";
+        cout << "\n YOUR PORTFOLIO\n";
 
         if (portfolio.empty())
         {
